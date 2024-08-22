@@ -1,0 +1,28 @@
+---
+title: "{{< fa star >}} Lulus Lore-Lesereise {{< fa star >}} "
+lang: de
+execute: 
+  echo: false
+  warning: false
+---
+
+```{r}
+source("reactable.R")
+lore <- read_lore()
+```
+
+Hallo Welt :)
+
+Ich bin die Lulu und ich mag WoW. Leider kenne ich mich mit der Lore nicht so gut aus. Zeit, das zu ändern und meine Lesereise zu beginnen.
+
+Die bestmögliche Reihenfolge der Bücher, Comics, Mangas und Videos zu finden, ist gar nicht so einfach. Ich halte mich an die Empfehlungen von Reddit-User [Drakemaster1991](https://www.reddit.com/r/warcraftlore/comments/122oiwz/warcraft_in_chronological_order_games_books/).
+
+Hier ist die Leseliste auf Deutsch.
+
+```{r}
+lore_reactable(lore)
+```
+
+`r todo_img()` To Do `r fertig_img()` Fertig gelesen / gesehen
+
+`r free_img()` Kostenlos `r kostet_img()` Kostet

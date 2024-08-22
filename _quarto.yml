@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "/pics"
+
+
+# website:
+#   navbar:
+#     right:
+      # - href: home/index.qmd
+      #   text: Home
+      # - href: posts/index.qmd
+      #   text: Blog
+      # - about.qmd
+      # - icon: github
+      #   href: https://github.com/
+      # - icon: twitch
+      #   href: https://twitter.com
+    # left:
+    #   - href: home/index.qmd
+    #     text: Home
+    #   - href: posts/index.qmd
+    #     text: Blog
+      #- text: "Gallery"
+      #  href: gallery/index.qmd
+
+format:
+  html:
+    theme:
+      dark: [dark-theme.scss]
+      # light: [light-theme.scss]
+    css: styles.css
+    toc: true
+    # grid:
+    #   body-width: 1400px
+
+editor: visual
