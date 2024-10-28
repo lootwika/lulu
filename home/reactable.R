@@ -175,30 +175,22 @@ row_details <- function(index) {
 
 lore_reactable <- function(lore) {
   reactable::reactable(
-    dplyr::select(lore, Status, Kosten, Titel, Bewertung),
-    resizable = TRUE,
-    compact = TRUE,
+    dplyr::select(lore, Kosten, Titel, Bewertung),
+    # resizable = TRUE,
+    # compact = TRUE,
     striped = TRUE,
     columns = list(
-      Status = colDef(
-        name = "",
-        width = 22,
-        cell = function(value) {
-          if (is.na(value) || value != "check"){
-            todo_img()
-          }
 
-          else{
-            fertig_img()
+      Titel = colDef(
+        name = "",
+        cell = function(value, index) {
+          url <- lore$Link[index]
+          if (is.na(url)) {
+            value
+          } else {
+            htmltools::tags$a(href = url, target = "_blank", value)
           }
         }
-      ),
-      Titel = colDef(
-        name = ""#,
-        # cell = function(value, index) {
-        #   url <- lore$Link[index]
-        #   htmltools::tags$a(href = url, target = "_blank", value)
-        # }
       ),
       Kosten = colDef(
         name = "",
@@ -219,6 +211,7 @@ lore_reactable <- function(lore) {
         }
       )
     ),
+
     details = row_details,
     theme = reactableTheme(
       color = "hsl(233, 9%, 87%)",

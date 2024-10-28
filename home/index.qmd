@@ -23,6 +23,4 @@ Hier ist die Leseliste auf Deutsch.
 lore_reactable(lore)
 ```
 
-`r todo_img()` To Do `r fertig_img()` Fertig gelesen / gesehen
-
 `r free_img()` Kostenlos `r kostet_img()` Kostet
